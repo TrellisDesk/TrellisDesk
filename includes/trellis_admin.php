@@ -40,14 +40,6 @@ class trellis_admin extends trellis {
         $this->check_tasks();
 
         #=============================
-        # Load Skin
-        #=============================
-
-        require_once TD_CLASS .'askin.php';
-
-        $this->skin = new td_class_askin( $this );
-
-        #=============================
         # Load Session
         #=============================
 
@@ -73,6 +65,16 @@ class trellis_admin extends trellis {
         {
             $this->session->do_logout();
         }
+
+				#2014-08-14 load after session for have the user language. 
+        #=============================
+        # Load Skin
+        #=============================
+
+        require_once TD_CLASS .'askin.php';
+
+        $this->skin = new td_class_askin( $this );
+
 
         #=============================
         # Other Actions
