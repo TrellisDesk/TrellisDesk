@@ -39,6 +39,14 @@ class trellis_admin extends trellis {
 
         $this->check_tasks();
 
+       #=============================
+        # Load Skin
+        #=============================
+
+        require_once TD_CLASS .'askin.php';
+
+        $this->skin = new td_class_askin( $this );
+
         #=============================
         # Load Session
         #=============================
@@ -59,6 +67,9 @@ class trellis_admin extends trellis {
         else
         {
             $this->user = $this->session->load_session();
+
+            #2014-08-14 add Marc Morissette Trellis Desc Canada  Reload language file in with the user language
+		        $this->load_lang('global' );
         }
 
         if ( $this->input['act'] == 'logout' )
@@ -66,17 +77,8 @@ class trellis_admin extends trellis {
             $this->session->do_logout();
         }
 
-				#2014-08-14 load after session for have the user language. 
-        #=============================
-        # Load Skin
-        #=============================
 
-        require_once TD_CLASS .'askin.php';
-
-        $this->skin = new td_class_askin( $this );
-
-
-        #=============================
+	      #=============================
         # Other Actions
         #=============================
 
@@ -110,8 +112,18 @@ class trellis_admin extends trellis {
         require_once TD_PATH .'languages/'. $this->cache->data['langs'][ $this->user['lang'] ]['key'] .'/ad_lang_'. $name .'.php';
 
         #$this->skin->trellis->lang = array_merge( (array)$lang , (array)$this->skin->trellis->lang );
-        $this->lang = array_merge( (array)$lang , (array)$this->lang );
+
+			  #2014-08-14 add Marc Morissette Trellis Desc Canada  Reload language file in with the user language
+        if ( $name = "global" )
+        {
+  	      	$this->lang = array_replace( (array)$this->lang, (array)$lang );
+        }
+        else 
+      	  	$this->lang = array_merge( (array)$lang , (array)$this->lang );
+
+
     }
+
 
     #=======================================
     # @ Check Permission
