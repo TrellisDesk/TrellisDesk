@@ -11,7 +11,7 @@ $lang = array(
 
 'add_rating_success' => 'Votre &eacute;valuation a &eacute;t&eacute; ajout&eacute; avec succ&egrave;s.',
 'almost_acc_activate' => 'Votre adresse courriel a &eacute;t&eacute; v&eacute;rifi&eacute;e avec succ&egrave;s. Avant de pouvoir commencer &agrave; utiliser votre compte, un administrateur doit approuver votre compte manuellement. Vous recevrez un e-mail lorsque votre compte est approuv&eacute;.',
-'change_val_email' => 'Avant que nous puissions modifier votre courriel, vous devez d\'abord cliquer sur le lien de validation dans le courriel qui a &eacute;t&eacute; envoy&eacute; &agrave; votre nouvelle adresse.',
+'change_val_email' => 'Avant que nous puissions modifier votre courriel, vous devez d&#8217;abord cliquer sur le lien de validation dans le courriel qui a &eacute;t&eacute; envoy&eacute; &agrave; votre nouvelle adresse.',
 'click_here' => 'cliquez ici',
 'delete_comment_success' => 'Le commentaire a &eacute;t&eacute; supprim&eacute; avec succ&egrave;s.',
 'edit_comment_success' => 'Le commentaire a &eacute;t&eacute; modifi&eacute; avec succ&egrave;s.',
@@ -20,7 +20,7 @@ $lang = array(
 'new_user_no_val' => 'Votre compte a &eacute;t&eacute; cr&eacute;&eacute; avec succ&egrave;s. Vous pouvez maintenant vous connecter &agrave; votre compte.',
 'new_user_val_admin' => 'Avant de pouvoir commencer &agrave; utiliser votre compte, un administrateur doit approuver votre compte manuellement. Vous recevrez un courriel lorsque votre compte est approuv&eacute;.',
 'new_user_val_both' => 'Avant de pouvoir commencer &agrave; utiliser votre compte, un administrateur doit approuver manuellement votre compte et vous devez cliquer sur le lien de validation dans le courriel qui a &eacute;t&eacute; envoy&eacute; &agrave; votre adresse courriel.',
-'new_user_val_email' => 'Avant de pouvoir commencer &agrave; utiliser votre compte, vous devez d\'abord cliquer sur le lien de validation dans le courriel qui a &eacute;t&eacute; envoy&eacute; &agrave; votre adresse courriel.',
+'new_user_val_email' => 'Avant de pouvoir commencer &agrave; utiliser votre compte, vous devez d&#8217;abord cliquer sur le lien de validation dans le courriel qui a &eacute;t&eacute; envoy&eacute; &agrave; votre adresse courriel.',
 'new_user_val_resend' => 'Une nouvelle validation courriel a &eacute;t&eacute; envoy&eacute; avec succ&egrave;s &agrave; votre courriel.',
 'please_wait' => 'S\'il vous pla&icirc;t attendre',
 'reply_delete_success' => 'La r&eacute;ponse a &eacute;t&eacute; supprim&eacute; avec succ&egrave;s.',

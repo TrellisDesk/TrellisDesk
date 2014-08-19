@@ -28,7 +28,7 @@ $lang = array(
 'full_star' => '&Eacute;toile complet',
 'half_star' => '&Eacute;toile &agrave; moiti&eacute;',
 'keywords_phrase' => 'Entrez les mots cl&eacute;s ou une phrase',
-'no_articles' => 'Il n\'y a pas d\'articles &agrave; afficher.',
+'no_articles' => 'Il n\'y a pas d&#8217;articles &agrave; afficher.',
 'no_articles_found' => 'Aucun article trouv&eacute;.',
 'no_categories' => 'Il n\'y a pas de cat&eacute;gories &agrave; afficher.',
 'no_comments' => 'Aucun commentaire n\'a encore &eacute;t&eacute; fait pour cet article.',
@@ -39,7 +39,7 @@ $lang = array(
 'stars' => '&Eacute;toiles',
 'sub_categories' => 'Sous-cat&eacute;gories',
 'view_category' => 'Voir cat&eacute;gorie',
-'viewing_article' => 'Voir l\'article',
+'viewing_article' => 'Voir l&#8217;article',
 'views' => 'Vues',
 
 );

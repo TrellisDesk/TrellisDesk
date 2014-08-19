@@ -32,8 +32,8 @@ $lang = array(
 'error_cache_unknown' => 'M&eacute;moire cache inconnu.',
 'key' => 'Cl&eacute;',
 'menu_cache_options' => 'Options de la m&eacute;moire cache',
-'menu_clear' => '<strong> Effacer </ strong> tous les caches',
-'menu_rebuild' => '<strong> Reconstruire </ strong> tous les caches',
+'menu_clear' => '<strong> Effacer </strong> tous les caches',
+'menu_rebuild' => '<strong> Reconstruire </strong> tous les caches',
 'rebuild' => 'Reconstruire',
 'size' => 'Taille',
 
