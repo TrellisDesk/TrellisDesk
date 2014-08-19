@@ -480,13 +480,13 @@ class td_func_languages {
     {
         $data = str_replace( '&', '&amp;', $data );
         $data = str_replace( '\'', '&#039;', $data );
-        $data = str_replace( '\'', '&#39;', $data );
+#2014-08-19 add Marc Morissette Trellis Desc Canada
+#        $data = str_replace( '\'', '&#39;', $data );
         $data = str_replace( '"', '&quot;', $data );
         $data = str_replace( '<', '&lt;', $data );
         $data = str_replace( '>', '&gt;', $data );
         $data = str_replace( '(', '&#40;', $data );
         $data = str_replace( ')', '&#41;', $data );
-
         return $data;
     }
 
@@ -497,8 +497,9 @@ class td_func_languages {
     public function convert_html( $data )
     {
         $data = str_replace( '&amp;', '&', $data );
-        $data = str_replace( '&#039;', '\'', $data );
-        $data = str_replace( '&#39;', '\'', $data );
+			  #2014-08-19 add Marc Morissette Trellis Desc Canada KEEP ' in the format &#039; else we have problem with javascript.
+#        $data = str_replace( '&#039;', '\'', $data );
+#        $data = str_replace( '&#39;', '\'', $data );
         $data = str_replace( '&quot;', '"', $data );
         $data = str_replace( '&lt;', '<', $data );
         $data = str_replace( '&gt;', '>', $data );
