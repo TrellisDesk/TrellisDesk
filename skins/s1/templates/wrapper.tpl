@@ -69,7 +69,7 @@
         <h2>{$lang['my_account']}</h2>
         <div class="row1-med">
             {$lang['welcome']} <b><a href="{$td_url}/index.php?page=myaccount">{$user['name']}</a></b>.<br /><br />
-            <a href="{$td_url}/index.php?page=account">{$lang['my_account']}</a> | <a href="{$td_url}/index.php?act=logout">{$lang['logout']}</a>
+            <a href="{$td_url}/index.php?page=account">{$lang['my_account']}</a> {if $user['g_acp_access']} | <a href='{$td_url}/admin.php'>{$lang['admin']}</a>{/if} | <a href="{$td_url}/index.php?act=logout">{$lang['logout']}</a>
         </div>
     {elseif $user['s_tkey']}
         <h2>{$lang['my_account']}</h2>
