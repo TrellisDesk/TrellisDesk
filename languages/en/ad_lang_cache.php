@@ -26,6 +26,7 @@ $lang = array(
 'cache_groups' => 'Groups',
 'cache_langs' => 'Languages',
 'cache_misc' => 'Miscellaneous',
+'cache_news' => 'Pages',
 'cache_news' => 'News',
 'cache_pfields' => 'Profile Fields',
 'cache_priorities' => 'Priorities',
@@ -36,6 +37,8 @@ $lang = array(
 'cache_statuses' => 'Statuses',
 'cache_all' => 'All',
 'key' => 'Key',
+'help_about_cache_title' => 'Help about cache title',
+'help_about_cache_msg' => 'Help about cache msg',
 
 );
 

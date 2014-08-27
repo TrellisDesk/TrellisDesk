@@ -34,7 +34,7 @@ class td_source_pages {
         # Grab Page
         #=============================
 
-        if ( ! $p = $this->trellis->func->pages->get_single_by_alias( array( 'id', 'title', 'alias', 'content' ), $this->trellis->input['id'] ) ) $this->trellis->skin->error('no_page');
+        if ( ! $p = $this->trellis->func->pages->get_single_by_id( array( 'id', 'title', 'alias', 'content' ), $this->trellis->input['id'] ) ) $this->trellis->skin->error('no_page');
 
         #=============================
         # Format Page

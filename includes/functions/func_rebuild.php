@@ -111,6 +111,36 @@ class td_func_rebuild {
         $this->trellis->cache->add( 'groups', $to_cache, 1 );
     }
 
+
+    # 2014-08-27 Trellis Desk Canada Add pages into cache
+    #=======================================
+    # @ Rebuild Pages Cache
+    #=======================================
+
+    public function pages_cache($limit=0)
+    {
+        $to_cache = array();
+
+     #   if ( ! $limit ) $limit = $this->trellis->cache->data['settings']['pages']['dashboard_amount'];
+
+        $this->trellis->db->construct( array(
+                                             'select'    => array( 'id', 'title', 'alias', 'date' ),
+                                             'from'        => 'pages',
+                                             'order'    => array( 'title' => 'asc' ),
+     #                                        'limit'    => array( 0, $limit ),
+                                      )      );
+
+        $this->trellis->db->execute();
+
+        while ( $a = $this->trellis->db->fetch_row() )
+        {
+            $to_cache[ $a['id'] ] = $a;
+        }
+
+        $this->trellis->cache->add( 'pages', $to_cache, 1 );
+    }
+
+
     #=======================================
     # @ Rebuild News Cache
     #=======================================

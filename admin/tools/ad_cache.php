@@ -28,6 +28,7 @@ class td_ad_cache {
         'skins',
         'staff', # TODO: is this too big?
         'statuses',
+        'pages', # Add by Trellis Desk Canada 
     );
 
     #=======================================

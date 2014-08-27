@@ -21,7 +21,13 @@
                 <a href="{$td_url}/index.php?page=tickets">{$lang['ticket_history']}</a>
                 <a href="{$td_url}/index.php?page=tickets&amp;act=add">{$lang['open_ticket']}</a>
                 {if $cache['settings']['kb']['enable'] && $user['g_kb_access']}<a href="{$td_url}/index.php?page=kb">{$lang['knowledge_base']}</a>{/if}
-                <a href="{$td_url}/index.php?page=account">{$lang['my_account']}</a></div>
+                <a href="{$td_url}/index.php?page=account">{$lang['my_account']}</a>
+    {if $pages}
+    {foreach $pages as $a}
+	    <a href="{$td_url}/index.php?page=pages&amp;id={$a['id']}" title="{$a['description']}">{$a['title']}</a>
+    {/foreach}
+    {/if}
+            </div>
             <div id="menuright"></div>
         </div>
         <div id="navbar">

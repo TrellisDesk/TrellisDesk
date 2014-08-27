@@ -610,7 +610,9 @@ class trellis {
 
     public function check_cache()
     {
-        $check = array( 'settings', 'departs', 'categories', 'groups', 'news', 'langs', 'skins', 'pfields', 'dfields', 'rtemplates', 'priorities', 'staff', 'flags', 'statuses', 'misc' );
+#2014.08.27 Trellis Desk Canada add pages into cache     	
+#        $check = array( 'settings', 'departs', 'categories', 'groups', 'news', 'langs', 'skins', 'pfields', 'dfields', 'rtemplates', 'priorities', 'staff', 'flags', 'statuses', 'misc' );
+        $check = array( 'settings', 'departs', 'categories', 'groups', 'news', 'langs', 'skins', 'pfields', 'dfields', 'rtemplates', 'priorities', 'staff', 'flags', 'statuses', 'misc', 'pages' );
         $to_cache = array();
 
         foreach ( $check as $ck )

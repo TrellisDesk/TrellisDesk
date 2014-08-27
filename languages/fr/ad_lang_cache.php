@@ -21,6 +21,7 @@ $lang = array(
 'cache_list' => 'Liste des m&eacute;moire cache',
 'cache_misc' => 'Diverses',
 'cache_news' => 'Nouvelles',
+'cache_pages' => 'Pages',
 'cache_pfields' => 'Les champs du profil',
 'cache_priorities' => 'Priorit&eacute;s',
 'cache_rtemplates' => 'Mod&egrave;le de r&eacute;ponse',
@@ -36,6 +37,8 @@ $lang = array(
 'menu_rebuild' => '<strong> Reconstruire </strong> tous les caches',
 'rebuild' => 'Reconstruire',
 'size' => 'Taille',
+'help_about_cache_title' => 'Help about cache title',
+'help_about_cache_msg' => 'Help about cache msg',
 
 );
 

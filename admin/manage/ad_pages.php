@@ -117,7 +117,7 @@ class td_ad_pages {
             {
                 $page_rows .= "<tr>
                                     <td class='bluecellthin-light'><strong>{$p['id']}</strong></td>
-                                    <td class='bluecellthin-dark'><a href='<! TD_URL !>/index?page=pages&amp;id={$p['alias']}'>{$p['title']}</a></td>
+                                    <td class='bluecellthin-dark'><a href='<! TD_URL !>/index.php?page=pages&amp;id={$p['id']}'>{$p['title']}</a></td>
                                     <td class='bluecellthin-light' align='center'><a href='<! TD_URL !>/admin.php?section=manage&amp;page=pages&amp;act=edit&amp;id={$p['id']}'><img src='<! IMG_DIR !>/button_edit.gif' alt='{lang.edit}' /></a></td>
                                     <td class='bluecellthin-light' align='center'><a href='<! TD_URL !>/admin.php?section=manage&amp;page=pages&amp;act=dodel&amp;id={$p['id']}' onclick='return confirmDelete({$p['id']})'><img src='<! IMG_DIR !>/button_delete.gif' alt='{lang.delete}' /></a></td>
                                 </tr>";
@@ -357,6 +357,16 @@ class td_ad_pages {
         if ( ! $this->trellis->input['alias'] ) $this->trellis->func->pages->edit( array( 'alias' => $page_id ), $page_id );
 
         $this->trellis->log( array( 'msg' => array( 'page_added', $this->trellis->input['title'] ), 'type' => 'other' ) );
+
+
+				#2014.08.27 add cache for pages
+        #=============================
+        # Rebuild Cache
+        #=============================
+
+        $this->trellis->load_functions('rebuild');
+
+        $this->trellis->func->rebuild->pages_cache();
 
         #=============================
         # Redirect
