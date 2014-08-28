@@ -21,6 +21,30 @@ class td_source_account {
 
         if ( ! $this->trellis->user['id'] ) $this->trellis->skin->error( 'must_be_user', 1 );
 
+
+        #=============================
+        # Grab Pages
+        #=============================
+#        if ( $this->trellis->cache->data['settings']['pages']['enable'] && $this->trellis->cache->data['settings']['pages']['dashboard'] )
+#        {
+            if ( ! empty( $this->trellis->cache->data['pages'] ) )
+            {
+                $pages = array();
+
+                foreach( $this->trellis->cache->data['pages'] as $n )
+                {
+                    $pages[ $n['id'] ] = $n;
+                    #=============================
+                    # Format Page
+                    #=============================
+
+                    $pages[ $n['id'] ]['date_human'] = $this->trellis->td_timestamp( array( 'time' => $a['date'], 'format' => 'short' ) );
+                }
+
+                $this->trellis->skin->set_var( 'pages', $pages );
+						}
+#				}
+
         #=============================
         # Initialize
         #=============================
