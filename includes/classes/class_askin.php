@@ -117,7 +117,7 @@ class td_class_askin {
 
         $this->output = $this->get_wrapper();
 
-        if ( $extra['error'] )
+        if ( isset( $extra['error'] ) )
         {
             $this->trellis->load_lang('error');
 
@@ -136,7 +136,7 @@ class td_class_askin {
             $this->output = str_replace("<% HOVER_BAR %>"    , $this->get_hover_bar()    , $this->output);
         }
 
-        if ( $extra['login'] )
+        if ( isset ( $extra['login'] ) )
         {
             $red_link = '<a href="admin.php">{lang.login}</a>';
         }
