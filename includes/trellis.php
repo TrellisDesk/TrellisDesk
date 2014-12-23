@@ -9,8 +9,8 @@
 
 class trellis {
 
-    public $version_name = '2.0 Alpha 4';
-    public $version_short = '2.0 a4';
+    public $version_name = '2.0 Alpha 5';
+    public $version_short = '2.0 a5';
     public $version_number = '20014000';
     public $config = array();
     public $lang = array();
@@ -52,6 +52,12 @@ class trellis {
         {
             ini_set( 'display_errors', 1 );
             error_reporting( E_ALL | E_NOTICE );
+        }
+        else 
+        {
+            ini_set( 'display_errors', 0 );
+            error_reporting( E_ERROR );
+            ini_set('error_reporting', 'off');
         }
 
         $this->error = new td_class_error_handler( TD_DEBUG );
@@ -209,7 +215,8 @@ class trellis {
 
                     $class_name = 'td_func_'. $name;
 
-                    $this->func->$name = new $class_name();
+
+                   	$this->func->$name = new $class_name();
                     $this->func->$name->trellis = &$this;
                 }
                 else
@@ -1287,8 +1294,7 @@ class trellis {
     {
         $this->db->construct( array(
                                             'select'    => array( 'id', 'uid' ),
-                                            'from'    => 'tickets',
-                                            'where'    => array( array( 'close_date', '<=', time() ), array( 'close_date', '!=', 0, 'and' ), array( 'status', '=', 4, 'and' ) ),
+                                            'from'    => 'tickets'
                                     )     );
 
         $this->db->execute();
