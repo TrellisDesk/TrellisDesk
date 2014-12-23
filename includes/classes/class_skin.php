@@ -33,6 +33,8 @@ class td_class_skin {
         require_once TD_INC .'smarty/Smarty.class.php';
 
         $this->smarty = new Smarty();
+        
+ //       $this->marty->registerPlugin("function","date_now", "print_current_date");
 
         #=============================
         # Do We Have A Skin ID?
@@ -50,10 +52,17 @@ class td_class_skin {
         # Load Functions
         #=============================
 
-        $this->smarty->register_function( 'lv_field', array( 'td_class_skin', 'lv_add_field' ) );
-        $this->smarty->register_function( 'lv_rule', array( 'td_class_skin', 'lv_add_rule' ) );
-        $this->smarty->register_function( 'focus', array( 'td_class_skin', 'focus_js' ) );
-        $this->smarty->register_function( 'scroll', array( 'td_class_skin', 'scroll_to_js' ) );
+//        $this->smarty->register_function( 'lv_field', array( 'td_class_skin', 'lv_add_field' ) );
+//        $this->smarty->register_function( 'lv_rule', array( 'td_class_skin', 'lv_add_rule' ) );
+//        $this->smarty->register_function( 'focus', array( 'td_class_skin', 'focus_js' ) );
+//        $this->smarty->register_function( 'scroll', array( 'td_class_skin', 'scroll_to_js' ) );
+
+        $this->smarty->registerPlugin( "compiler",'lv_field', array( 'td_class_skin', 'lv_add_field' ) );
+        $this->smarty->registerPlugin( "compiler",'lv_rule', array( 'td_class_skin', 'lv_add_rule' ) );
+        $this->smarty->registerPlugin( "compiler",'focus', array( 'td_class_skin', 'focus_js' ) );
+        $this->smarty->registerPlugin( "compiler",'scroll', array( 'td_class_skin', 'scroll_to_js' ) );
+
+
 
         #=============================
         # Set Paths
@@ -61,6 +70,9 @@ class td_class_skin {
 
         $this->smarty->template_dir = TD_SKIN .'s'. $this->trellis->user['skin'] .'/templates/';
         $this->smarty->compile_dir  = $this->trellis->config['skin_compile_path'];
+
+        $this->smarty->setCacheDir = $this->trellis->config['cache_path'];
+        $this->smarty->setConfigDir = $this->trellis->config['data_path'];
 
         #=============================
         # Load Skin Data
@@ -90,7 +102,8 @@ class td_class_skin {
 
     function register_function($tag, $function)
     {
-        $this->smarty->register_function( $tag, $function );
+//        $this->smarty->register_function( $tag, $function );
+        $this->smarty->registerPlugin( "compiler", $tag, $function );
     }
 
     #=======================================
